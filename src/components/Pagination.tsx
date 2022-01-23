@@ -4,6 +4,7 @@ import { GrFormPrevious, GrFormNext } from 'react-icons/gr';
 import { AiOutlineEllipsis } from 'react-icons/ai';
 import usePagination from '../hooks/usePagination';
 import axios from 'axios';
+import { Passenger, Response } from '../types';
 
 interface Props {
   count: number;
@@ -87,31 +88,6 @@ const Pagination: React.FC<Props> = ({
     </Navigation>
   );
 };
-
-interface Airline {
-  id: number;
-  name: string;
-  country: string;
-  logo: string;
-  slogan: string;
-  head_quaters: string;
-  website: string;
-  established: string;
-}
-
-interface Passenger {
-  _id: string;
-  name: string;
-  trips: number;
-  airline: Airline;
-  __v: number;
-}
-
-interface Response {
-  totalPassengers: number;
-  totalPages: number;
-  data: Array<Passenger>;
-}
 
 const PaginationPage = () => {
   const [page, setPage] = useState(0);
