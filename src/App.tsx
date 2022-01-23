@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 // import styled from '@emotion/styled/macro';
 // import Modal from './components/Modal';
 import List from './components/List';
+import ListIntersection from './components/ListIntersection';
 // import PaginationPage from './components/Pagination';
 // import Carousel from './components/Carousel';
 // import SkeletonPage from './components/Skeleton';
@@ -55,7 +56,8 @@ function App() {
     //   </Modal>
     // </Container>
     <>
-      <List />
+      {/* <List /> */}
+      <ListIntersection />
     </>
   );
 }
